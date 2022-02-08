@@ -19,6 +19,7 @@ export default function Header({ssData, dispatch}) {
   const onOpenFileData = (json) => {
     try{
       const data = JSON.parse(json);
+      data.title = data.title || "Spreadsheet 1";
       if(data?.cells && isNumber(data.rows) && isNumber(data.cols) && isDefined(data.title)) {
           data.cells = data.cells.map(cell => {
           if(cell === 0){
@@ -34,6 +35,7 @@ export default function Header({ssData, dispatch}) {
           data: data
         });
         setTitle(data.title);
+        document.title = data.title;
       }
 
     }catch(e){
@@ -88,6 +90,7 @@ export default function Header({ssData, dispatch}) {
         onBlur={(e)=>{
           ssData.setTitle(e.currentTarget.value);
           setTitle(e.currentTarget.value);
+          document.title = e.currentTarget.value;
           titleRef.current.style.visibility = "visible";
         }}
         />
