@@ -45,6 +45,7 @@ There is lot of know issue in there, some of them are
 
 1. No circular check
 2. Functions evaluation only goes from top to bottom
+3. Useless piece of software 😆 
 
 
 
