@@ -26,6 +26,8 @@ to build production bundle
 ![Grid, the simple spreadsheet lookalike](/misc/spreadsheet_1.png)
 
 
+### demo site
+[https://gridpm.netlify.app](https://gridpm.netlify.app/)
 
 function always starts with = sign
 
