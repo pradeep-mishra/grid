@@ -19,6 +19,14 @@ function checkAllFunc(data) {
   return data;
 }
 
+function isDefined(value) {
+  return value !== undefined && value !== null;
+}
+
+function isNumber(value) {
+  return typeof value === "number";
+}
+
 export default function reducer(state, action) {
   switch (action.type) {
     case "set":
@@ -38,7 +46,20 @@ export default function reducer(state, action) {
       return {
         data: state.data
       };
-    default:
+    case "title":
+      state.data.title = action.title;
+      return {
+        data: state.data
+      };
+    case "load":
+      state.data.cells=action.data.cells;
+      state.data.title=action.data.title;
+      state.data.rows = action.data.rows;
+      state.data.cols = action.data.cols;
+      return {
+        data : state.data
+      }
+      default:
       throw new Error();
   }
 }

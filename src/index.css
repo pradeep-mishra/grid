@@ -12,6 +12,8 @@ body {
 header {
   position: fixed;
   display: flex;
+  justify-content: space-between;
+  padding-right:10px;
   align-items: center;
   height: 50px;
   background-color: white;
@@ -107,9 +109,6 @@ div.fn-ribbon input:focus {
 }
 
 
-
-
-
 .ss-title {
   height: 27px;
   width: auto;
@@ -174,4 +173,39 @@ div.fn-ribbon input:focus {
 
 .ss-title-input:hover {
   border-color: #e5e5e5;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+.btn{
+  padding: 6px 16px;
+  border-radius: 3px;
+  font-weight: 400;
+  font-size: .925rem;
+  display: inline-block;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  cursor: pointer;
+  text-transform: none;
+  overflow: visible;
+  border:none;
+  margin:0 5px;
+}
+
+.open-btn{
+  background-color: rgb(73, 135, 238);
+  color:#fff;
+  border:1px solid rgb(52, 105, 189);
+}
+
+.save-btn{
+  background-color: rgb(91, 154, 93);
+  color:#fff;
+  border:1px solid rgb(87, 152, 89);
 }

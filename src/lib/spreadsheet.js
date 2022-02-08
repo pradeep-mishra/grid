@@ -9,7 +9,8 @@ function getColumnId(index) {
 }
 
 export default class SpreadsheetData {
-  constructor(rows, cols) {
+  constructor(rows, cols, title="Spreadsheet 1") {
+    this.title =  title;
     this.rows = rows;
     this.cols = cols;
     this.cells = Array.from({ length: cols * rows }, () => {
@@ -24,5 +25,8 @@ export default class SpreadsheetData {
   }
   getCellTitle(x, y) {
     return getColumnId(x) + y;
+  }
+  setTitle(title) {
+    this.title = title;
   }
 }

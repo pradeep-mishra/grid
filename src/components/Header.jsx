@@ -1,9 +1,65 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import OpenButton from './Open';
+import SaveButton from './Save';
 
-export default function Header({ ssTitle = "Spreadsheet 1" }) {
-  const [title, setTitle] = useState(ssTitle);
+function isDefined(value) {
+  return value !== undefined && value !== null;
+}
+
+function isNumber(value) {
+  return typeof value === "number";
+}
+
+
+export default function Header({ssData, dispatch}) {
+  const [title, setTitle] = useState(ssData.title);
   const titleRef = useRef(null);
   const titleInputRef = useRef(null);
+
+  const onOpenFileData = (json) => {
+    try{
+      const data = JSON.parse(json);
+      if(data?.cells && isNumber(data.rows) && isNumber(data.cols) && isDefined(data.title)) {
+          data.cells = data.cells.map(cell => {
+          if(cell === 0){
+            return {
+              input : "",
+              value : ""
+            }
+          }
+          return cell;
+        });
+        dispatch({
+          type:'load',
+          data: data
+        });
+        setTitle(data.title);
+      }
+
+    }catch(e){
+      console.log(e);
+    }
+  };
+
+  const onSaveFile = (callback) => {
+    const saveData = {
+      title: ssData.title,
+      rows: ssData.rows,
+      cols: ssData.cols,
+      cells: ssData.cells.map(cell => {
+        if(cell.value || cell.input){
+          return cell;
+        }
+        return 0;
+      })
+    }
+    
+    callback(JSON.stringify(saveData), ssData.title);
+  }
+
+  useEffect(() => {
+    titleInputRef.current.value = title;
+  });
 
   return (
     <header>
@@ -23,22 +79,24 @@ export default function Header({ ssTitle = "Spreadsheet 1" }) {
         </div>
         <input
         ref={titleInputRef} 
-        value={title}
         className="ss-title-input" 
         type="text" 
         tabIndex="0" 
         dir="ltr" 
         style={{visibility: "visible", width: "254px"}} 
-        onChange={(e)=>setTitle(e.currentTarget.value)}
-        onBlur={()=>{
+        onChange={(e)=>{}}
+        onBlur={(e)=>{
+          ssData.setTitle(e.currentTarget.value);
+          setTitle(e.currentTarget.value);
           titleRef.current.style.visibility = "visible";
         }}
         />
 
       </div>
-      <div></div>
-      <div></div>
-      <div></div>
+      <div className="btn-container">
+        <OpenButton onContent={onOpenFileData} />
+        <SaveButton onSave={onSaveFile}/>
+      </div>
     </header>
   );
 }

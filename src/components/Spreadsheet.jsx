@@ -1,11 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import useSpreadsheet from "../hooks/useSpreadsheet";
 import FlyingInput from "./FlyingInput";
 import FnRibbon from "./FnRibbon";
 import Table from "./Table";
 
-export default function Spreadsheet({ cols, rows }) {
-  const [data, dispatch] = useSpreadsheet(rows, cols);
+export default function Spreadsheet({ cols, rows , data , dispatch}) {
   const [showFyingInput, setShowFlyingInput] = useState(false);
   const [currentCell, setCurrentCell] = useState({
     x: 0,
@@ -36,7 +34,7 @@ export default function Spreadsheet({ cols, rows }) {
   }, [showFyingInput]);
 
   return (
-    <>
+    <div>
       <FnRibbon
         cell={cellPointer}
         funcInput={cellValue}
@@ -59,6 +57,6 @@ export default function Spreadsheet({ cols, rows }) {
         inputRef={inputRef}
         dispatch={dispatch}
       />
-    </>
+    </div>
   );
 }
