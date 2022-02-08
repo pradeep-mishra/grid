@@ -1,6 +1,7 @@
 # grid
-simple spreadsheet looking app with next to no functionality :)
-created just for fun
+simple spreadsheet looking app with next to no functionality 😆 
+
+created just for fun 😄
 
 
 ```bash
