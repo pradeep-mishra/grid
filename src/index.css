@@ -1,0 +1,106 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Trebuchet MS",
+    "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: white;
+  width: 100%;
+  z-index: 5;
+  border-bottom: solid 1px #a9a9a9;
+}
+header > div {
+  display: flex;
+  margin-left: 5px;
+}
+header h1 {
+  font-size: 16px;
+  font-weight: 500;
+}
+div.header-spacer {
+  height: 50px;
+  width: 100%;
+}
+
+table.ss-table {
+  border-collapse: collapse;
+  border: 1px solid #e2e2e3;
+  table-layout: initial;
+}
+tr:first-child,
+td:first-child {
+  background: #e6f4ea;
+  color: black;
+}
+td {
+  border-bottom: 1px solid #e2e2e3;
+  border-right: 1px solid #e2e2e3;
+  font-size: 15px;
+}
+
+td {
+  cursor: pointer;
+  min-width: 50px;
+  min-height: 20px;
+  padding-left: 4px;
+}
+.cell-input {
+  position: absolute;
+  font-size: 14px;
+  padding: 0px;
+  resize: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.fn-ribbon {
+  display: grid;
+  grid-template-columns: 56px 56px 1fr;
+  border-bottom: solid 1px #a9a9a9;
+  overflow: hidden;
+  align-items: center;
+}
+div.fn-ribbon > div {
+  padding-left: 6px;
+}
+div.fn-ribbon > div:first-child {
+  border-right: solid 1px #a9a9a9;
+  font-size: 14px;
+}
+div.fn-ribbon > div:last-child {
+  border-left: solid 1px #a9a9a9;
+  padding: 0px;
+}
+div.fn-ribbon > div:nth-child(2) {
+  font-family: cursive, -apple-system, BlinkMacSystemFont, "Trebuchet MS",
+    "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial;
+  color: #606060;
+}
+
+div.fn-ribbon input {
+  width: 100%;
+  padding-left: 4px;
+  font-size: 14px;
+  margin: 0;
+  height: 100%;
+  border: none;
+}
+
+div.fn-ribbon input:focus {
+  border: none;
+  outline: 0px;
+}
+.in-middle {
+  align-items: center;
+  text-align: center;
+}
