@@ -10,7 +10,7 @@ OR
 ```bash
 npm run dev
 ```
-to run dev server
+to run local server
 
 ```bash
 vite build
@@ -23,18 +23,19 @@ npm run build
 to build production bundle
 
 
+function always starts with = sign
+E.g. =SUM(2,3)
 
-Functions currenly supported
+##### Functions currenly supported
 
-1. SUM(val1, vva2, ..so on)
-    range functionality is currently not supported, like A0:A10
+1. =SUM(val1, val2, ..so on)
+    - range functionality is currently not supported, like A0:A10
 
-2. EVAL(Date.now() + 1)
-  can run full js using eval function
+2. =EVAL(1 + 1)
+    - can run full js using eval function
 
 
-
-Know issues
+##### Know issues
 There is lot of know issue in there, some of them are
 
 1. No circular check
