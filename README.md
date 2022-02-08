@@ -22,16 +22,20 @@ npm run build
 ```
 to build production bundle
 
+![Grid, the simple spreadsheet lookalike](/misc/spreadsheet_1.png)
+
+
 
 function always starts with = sign
-E.g. =SUM(2,3)
+
+e.g. =SUM(2,3)
 
 ##### Functions currenly supported
 
-1. =SUM(val1, val2, ..so on)
+1. SUM(val1, val2, ..so on)
     - range functionality is currently not supported, like A0:A10
 
-2. =EVAL(1 + 1)
+2. EVAL(1 + 1)
     - can run full js using eval function
 
 
