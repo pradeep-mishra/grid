@@ -1,4 +1,5 @@
 export default function Cell({
+  cols,
   x,
   y,
   cell,
@@ -8,6 +9,7 @@ export default function Cell({
 }) {
   return (
     <td
+    //tabIndex={ (cols*x) + y}
       onClick={(e) => {
         cellRef.current = e.currentTarget;
         setCurrentCell({
@@ -16,7 +18,7 @@ export default function Cell({
           value: cell.value,
           input: cell.input
         });
-        setShowFlyingInput((isEditText) => !isEditText);
+        setShowFlyingInput((showFlyingInput) => !showFlyingInput);
       }}
     >
       {cell.value}

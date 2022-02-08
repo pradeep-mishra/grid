@@ -1,34 +1,40 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 export default function Header({ ssTitle = "Spreadsheet 1" }) {
   const [title, setTitle] = useState(ssTitle);
-  const [isOpen, setIsOpen] = useState(false);
-  const inputRef = useRef(null);
-
-  useEffect(() => {
-    if (isOpen) {
-      inputRef.current.value = title;
-    }
-  });
+  const titleRef = useRef(null);
+  const titleInputRef = useRef(null);
 
   return (
     <header>
-      <div>
-        <h1>{title}</h1>
+      <div 
+      onClick={(e)=>{
+        titleRef.current.style.visibility = "hidden";
+      }}
+      className="ss-title" 
+      >
+        <div 
+        ref={titleRef} 
+        className="ss-title-label" 
+        style={{pointerEvents: "none", maxWidth: "960px" , visibility: "visible"}} >
+          <span>
+            {title}
+          </span>
+        </div>
         <input
-          ref={inputRef}
-          style={{
-            width: "100%",
-            height: "100%",
-            display: isOpen ? "inline" : "none"
-          }}
-          type="text"
-          onChange={(e) => {}}
-          onBlur={(e) => {
-            setTitle(e.target.value);
-            setIsOpen(false);
-          }}
+        ref={titleInputRef} 
+        value={title}
+        className="ss-title-input" 
+        type="text" 
+        tabIndex="0" 
+        dir="ltr" 
+        style={{visibility: "visible", width: "254px"}} 
+        onChange={(e)=>setTitle(e.currentTarget.value)}
+        onBlur={()=>{
+          titleRef.current.style.visibility = "visible";
+        }}
         />
+
       </div>
       <div></div>
       <div></div>

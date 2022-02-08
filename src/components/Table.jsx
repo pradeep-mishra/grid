@@ -43,6 +43,7 @@ export default function Table({
             {range(cols).map((x) => (
               <Cell
                 key={y + "-" + x}
+                cols={cols}
                 x={x}
                 y={y}
                 cell={ssData.getCell(x, y)}

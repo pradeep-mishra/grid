@@ -105,3 +105,73 @@ div.fn-ribbon input:focus {
   align-items: center;
   text-align: center;
 }
+
+
+
+
+
+.ss-title {
+  height: 27px;
+  width: auto;
+  position: relative;
+  display: -moz-inline-box;
+  display: inline-block;
+}
+.docs-title-outer {
+  white-space: nowrap;
+}
+
+
+.ss-title-label {
+  font-variant-ligatures: no-contextual;
+  line-height: 22px;
+  margin: 0;
+  overflow: hidden;
+  padding: 2px 8px;
+  pointer-events: none;
+  position: absolute;
+  text-overflow: ellipsis;
+  top: 0;
+  white-space: pre;
+  z-index: 1;
+}
+
+.ss-title-input {
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 18px;
+  font-variant-ligatures: no-contextual;
+  height: 20px;
+  line-height: 22px;
+  margin: 0;
+  min-width: 1px;
+  padding: 2px 7px;
+  visibility: hidden;
+}
+.ss-title-input, .ss-title-label{
+  font-family: -apple-system, BlinkMacSystemFont, "Trebuchet MS",
+    "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.ss-title-input:focus {
+  border: 2px solid #1a73e8;
+  box-shadow: none;
+  border-radius: 4px;
+}
+.ss-title-input:focus {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #4d90fe;
+  box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1);
+  color: #000;
+  outline: none;
+}
+
+.ss-title-input:hover {
+  border-color: #e5e5e5;
+}
