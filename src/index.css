@@ -61,6 +61,7 @@ td {
   resize: none;
   margin: 0;
   padding: 0;
+  resize:both;
 }
 
 div.fn-ribbon {

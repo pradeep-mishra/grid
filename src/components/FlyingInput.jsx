@@ -29,7 +29,7 @@ export default function FlyingInput({
         top,
         display: showFyingInput ? "inline" : "none",
         height: rect?.height || 30,
-        minWidth: rect?.width ? rect?.width : "auto"
+        minWidth: rect?.width || "auto"
       }}
       onChange={(e) => {}}
       onBlur={(e) => {
