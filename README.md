@@ -27,7 +27,8 @@ to build production bundle
 
 
 ### demo site
-[https://gridpm.netlify.app](https://gridpm.netlify.app/)
+<a href="hhttps://gridpm.netlify.app/" target="_blank">https://gridpm.netlify.app</a>
+
 
 function always starts with = sign
 
