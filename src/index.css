@@ -209,3 +209,12 @@ div.fn-ribbon input:focus {
   color:#fff;
   border:1px solid rgb(87, 152, 89);
 }
+footer{
+  margin : 10px 0px;
+  padding-left: 6px;
+  display: flex;
+  justify-content:flex-start;
+}
+footer span{
+  margin-left:5px;
+}
