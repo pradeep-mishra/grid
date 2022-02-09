@@ -27,7 +27,7 @@ export default function Table({
     <table ref={tableRef} className="ss-table">
       <thead>
         <tr className="ss-top-row">
-          <td className="name-cell top-head" />
+          <td className="name-cell top-head sticky-cell" />
           {range(cols).map((x) => (
             <td key={"tg-" + x} className="in-middle name-cell">
               {getColumnId(x)}

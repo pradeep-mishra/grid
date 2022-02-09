@@ -260,6 +260,13 @@ footer span{
   background-color: #fff;
 }
 
+.sticky-cell{
+  z-index: 5;
+  position: sticky;
+  left: 0;
+}
+
+
 /* for firefox specific css */
 @-moz-document url-prefix() {
   
