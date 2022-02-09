@@ -1,4 +1,5 @@
 import useSpreadsheet from "../hooks/useSpreadsheet";
+import Footer from './Footer';
 import Header from "./Header";
 import Spreadsheet from "./Spreadsheet";
 
@@ -12,24 +13,7 @@ export default function layout() {
       <Header ssData={ssData} dispatch={dispatch}/>
       <div className="spacer-50"></div>
       <Spreadsheet rows={rows} cols={cols} data={ssData} dispatch={dispatch} />
-      <footer>
-        <span className="creator">&copy;Pradeep Mishra</span>
-        <span>
-          <a target="_blank" href="https://github.com/pradeep-mishra">
-            <img src="/github.png" alt="github" />
-          </a>
-        </span>
-        <span>
-          <a target="_blank" href="https://www.linkedin.com/in/ipradeepmishra/">
-            <img src="/linkedin.png" alt="linkedin" />
-          </a>
-        </span>
-        <span>
-          <a target="_blank" href="https://twitter.com/ipradeepmishra">
-            <img src="/twitter.png" alt="twitter" />
-          </a>
-        </span>
-      </footer>
+      <Footer/>
     </div>
   );
 }
