@@ -40,6 +40,7 @@ export default function Spreadsheet({ cols, rows , data , dispatch}) {
         funcInput={cellValue}
         setFuncInput={setFuncInput}
       />
+       <div className="spacer-30"></div>
       <Table
         tableRef={tableRef}
         ssData={data}

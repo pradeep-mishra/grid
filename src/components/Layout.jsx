@@ -10,7 +10,7 @@ export default function layout() {
   return (
     <div className="">
       <Header ssData={ssData} dispatch={dispatch}/>
-      <div className="header-spacer"></div>
+      <div className="spacer-50"></div>
       <Spreadsheet rows={rows} cols={cols} data={ssData} dispatch={dispatch} />
       <footer>
         <span className="creator">&copy;Pradeep Mishra</span>

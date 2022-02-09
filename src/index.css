@@ -29,33 +29,51 @@ header h1 {
   font-size: 16px;
   font-weight: 500;
 }
-div.header-spacer {
+
+.spacer-50 {
   height: 50px;
+  width: 100%;
+}
+.spacer-30 {
+  height: 30px;
   width: 100%;
 }
 
 table.ss-table {
-  border-collapse: collapse;
   border: 1px solid #e2e2e3;
   table-layout: initial;
+  border-collapse: separate; /* Don't collapse */
+  border-spacing: 0;
 }
-tr:first-child,
-td:first-child {
-  background: #e6f4ea;
+.name-cell {
+  background: #e6f4ea !important;
   color: black;
+  padding: 4px;
+  border-right: 1px solid #e2e2e3;
+  border-bottom: 1px solid #e2e2e3;
+  min-width: 50px;
+  min-height: 20px;
+  padding-left: 4px;
+  font-size: 15px;
 }
+.left-head{
+  position: sticky;
+  left:0;
+  top:81px;
+  z-index: -1;
+}
+
 td {
   border-bottom: 1px solid #e2e2e3;
   border-right: 1px solid #e2e2e3;
   font-size: 15px;
-}
-
-td {
   cursor: pointer;
   min-width: 50px;
   min-height: 20px;
   padding-left: 4px;
 }
+
+  
 .cell-input {
   position: absolute;
   font-size: 14px;
@@ -67,11 +85,16 @@ td {
 }
 
 div.fn-ribbon {
+  position: fixed;
   display: grid;
+  background-color: #fff;
   grid-template-columns: 56px 56px 1fr;
   border-bottom: solid 1px #a9a9a9;
   overflow: hidden;
   align-items: center;
+  width: 100%;
+  height: 30px;
+  z-index: 5;
 }
 div.fn-ribbon > div {
   padding-left: 6px;
@@ -116,9 +139,7 @@ div.fn-ribbon input:focus {
   display: -moz-inline-box;
   display: inline-block;
 }
-.docs-title-outer {
-  white-space: nowrap;
-}
+
 
 
 .ss-title-label {
@@ -147,6 +168,7 @@ div.fn-ribbon input:focus {
   min-width: 1px;
   padding: 2px 7px;
   visibility: hidden;
+  z-index: 2;
 }
 .ss-title-input, .ss-title-label{
   font-family: -apple-system, BlinkMacSystemFont, "Trebuchet MS",
@@ -217,4 +239,26 @@ footer{
 }
 footer span{
   margin-left:5px;
+}
+
+.ss-top-row{
+  top:81px;
+  position: -webkit-sticky;
+  position : -moz-sticky;
+  position:sticky;
+  z-index: 5;
+}
+
+.user-head{
+  top:108px;
+  position: -webkit-sticky;
+  position : -moz-sticky;
+  position:sticky;
+  /*z-index: 1;*/
+  background-color: #fff;
+}
+
+/* for firefox specific css */
+@-moz-document url-prefix() {
+  
 }

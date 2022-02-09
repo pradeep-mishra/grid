@@ -94,7 +94,6 @@ export default function Header({ssData, dispatch}) {
           titleRef.current.style.visibility = "visible";
         }}
         />
-
       </div>
       <div className="btn-container">
         <OpenButton onContent={onOpenFileData} />

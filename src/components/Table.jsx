@@ -25,25 +25,29 @@ export default function Table({
 }) {
   return (
     <table ref={tableRef} className="ss-table">
-      <tbody>
-        <tr>
-          <td />
+      <thead>
+        <tr className="ss-top-row">
+          <td className="name-cell top-head" />
           {range(cols).map((x) => (
-            <td key={"tg-" + x} className="in-middle">
-              <div className="col-name">{getColumnId(x)}</div>
+            <td key={"tg-" + x} className="in-middle name-cell">
+              {getColumnId(x)}
             </td>
           ))}
         </tr>
+      </thead>
+      <tbody>
 
         {range(rows).map((y) => (
           <tr key={y}>
-            <td className="in-middle" key={"sg-" + y}>
+            <td 
+            key={"sg-" + y} 
+            style={{zIndex : y === 0 ? "1" : "0"}}
+            className={`in-middle name-cell left-head ${y === 0 ? 'user-head' : ''}`}>
               {y}
             </td>
-            {range(cols).map((x) => (
+            {range(cols).map((x, index) => (
               <Cell
                 key={y + "-" + x}
-                cols={cols}
                 x={x}
                 y={y}
                 cell={ssData.getCell(x, y)}

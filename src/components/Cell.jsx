@@ -1,5 +1,4 @@
 export default function Cell({
-  cols,
   x,
   y,
   cell,
@@ -10,16 +9,17 @@ export default function Cell({
   return (
     <td
     //tabIndex={ (cols*x) + y}
-      onClick={(e) => {
-        cellRef.current = e.currentTarget;
-        setCurrentCell({
-          x,
-          y,
-          value: cell.value,
-          input: cell.input
-        });
-        setShowFlyingInput((showFlyingInput) => !showFlyingInput);
-      }}
+    className={y === 0 ? "user-head" : ""}
+    onClick={(e) => {
+      cellRef.current = e.currentTarget;
+      setCurrentCell({
+        x,
+        y,
+        value: cell.value,
+        input: cell.input
+      });
+      setShowFlyingInput((showFlyingInput) => !showFlyingInput);
+    }}
     >
       {cell.value}
     </td>
