@@ -37,6 +37,7 @@ header h1 {
 .spacer-30 {
   height: 30px;
   width: 100%;
+  border-top: 1px solid #a3a3a3;
 }
 
 table.ss-table {
@@ -95,6 +96,7 @@ div.fn-ribbon {
   width: 100%;
   height: 30px;
   z-index: 5;
+  border-top: 1px solid #a3a3a3;
 }
 div.fn-ribbon > div {
   padding-left: 6px;
