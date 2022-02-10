@@ -77,12 +77,15 @@ td {
   
 .cell-input {
   position: absolute;
-  font-size: 14px;
+  font-size: 15px;
   padding: 0px;
   resize: none;
   margin: 0;
   padding: 0;
   resize:both;
+  line-height: 27px;
+  padding-left: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 div.fn-ribbon {

@@ -51,7 +51,9 @@ export default function Spreadsheet({ cols, rows , data , dispatch}) {
         setCurrentCell={setCurrentCell}
       />
       <FlyingInput
+        ssData={data}
         currentCell={currentCell}
+        setCurrentCell={setCurrentCell}
         cellRef={cellRef}
         showFyingInput={showFyingInput}
         setShowFlyingInput={setShowFlyingInput}

@@ -1,4 +1,5 @@
 export default function Cell({
+  cols,
   x,
   y,
   cell,
@@ -8,7 +9,7 @@ export default function Cell({
 }) {
   return (
     <td
-    //tabIndex={ (cols*x) + y}
+    tabIndex={ (cols*y) + x}
     className={y === 0 ? "user-head" : ""}
     onClick={(e) => {
       cellRef.current = e.currentTarget;

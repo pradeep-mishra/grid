@@ -23,6 +23,7 @@ export default function Table({
   setShowFlyingInput,
   setCurrentCell
 }) {
+  //console.log('rows,cols', rows, cols);
   return (
     <table ref={tableRef} className="ss-table">
       <thead>
@@ -45,8 +46,9 @@ export default function Table({
             className={`in-middle name-cell left-head ${y === 0 ? 'user-head' : ''}`}>
               {y}
             </td>
-            {range(cols).map((x, index) => (
+            {range(cols).map((x) => (
               <Cell
+                cols={cols}
                 key={y + "-" + x}
                 x={x}
                 y={y}
