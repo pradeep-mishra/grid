@@ -20,7 +20,7 @@ export default function Footer() {
           </a>
         </span>
       </footer>
-      <div class="post-script">
+      <div className="post-script">
         <span>
           Following functions are supported
         </span>

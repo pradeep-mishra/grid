@@ -278,9 +278,13 @@ footer span{
   padding-left: 4px;
 }
 
+.post-script ol{
+  margin-top: 0;
+}
+
 .post-script li{
   padding-left: 15px;
-  margin: 10px 0px;
+  margin: 5px 0px;
 }
 
 .fontset, li{

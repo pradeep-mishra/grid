@@ -9,7 +9,7 @@ const cols = 50;
 export default function layout() {
   const [ssData, dispatch] = useSpreadsheet(rows, cols);
   return (
-    <div className="">
+    <div>
       <Header ssData={ssData} dispatch={dispatch}/>
       <div className="spacer-50"></div>
       <Spreadsheet rows={rows} cols={cols} data={ssData} dispatch={dispatch} />
