@@ -237,10 +237,10 @@ div.fn-ribbon input:focus {
   border:1px solid rgb(87, 152, 89);
 }
 footer{
-  margin : 10px 0px;
+  margin : 10px 10px;
   padding-left: 6px;
   display: flex;
-  justify-content:flex-start;
+  justify-content:flex-end;
 }
 footer span{
   margin-left:5px;
@@ -268,6 +268,28 @@ footer span{
   position: sticky;
   left: 0;
 }
+
+.post-script{
+  display: flex;
+  flex-direction: column;
+}
+
+.post-script > span{
+  padding-left: 4px;
+}
+
+.post-script li{
+  padding-left: 15px;
+  margin: 10px 0px;
+}
+
+.fontset, li{
+  font-family: -apple-system, BlinkMacSystemFont, "Trebuchet MS",
+    "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+}
+
 
 
 /* for firefox specific css */
