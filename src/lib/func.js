@@ -133,7 +133,6 @@ function evalFunc(args, action, state) {
 
 export function applyFunc(str, action, state) {
   let funcs = str.split("|>");
-  //console.log('funcs', funcs);
   const result = funcs.reduce((prev, curr) => {
     if (prev === "#Invalid_Func") {
       return prev;
@@ -146,7 +145,7 @@ export function applyFunc(str, action, state) {
     if (
       !funcData ||
       funcData.length !== 3 ||
-      typeof func[funcData[1]] !== "function"
+      typeof func[funcData[1].toLowerCase()] !== "function"
     ) {
       return "#Invalid_Func";
     }
@@ -154,7 +153,7 @@ export function applyFunc(str, action, state) {
     if (prev) {
       args.unshift(prev);
     }
-    return func[funcData[1]](args, action, state);
+    return func[funcData[1].toLowerCase()](args, action, state);
   }, "");
   return result;
 }
