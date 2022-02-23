@@ -1,4 +1,3 @@
-
 export default function Footer() {
   return (
     <>
@@ -21,16 +20,10 @@ export default function Footer() {
         </span>
       </footer>
       <div className="post-script">
-        <span>
-          Following functions are supported
-        </span>
+        <span>Following functions are supported</span>
         <ol>
-          <li>
-          =sum(1, 2, 3, A2, B5, C2)
-        </li>
-        <li>
-          =eval(js code)
-        </li>
+          <li>=sum(1, 2, 3, A2, B5, C2)</li>
+          <li>=eval(js code)</li>
         </ol>
       </div>
     </>

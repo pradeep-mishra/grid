@@ -1,8 +1,8 @@
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Trebuchet MS",
-    "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS',
+    'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -13,7 +13,7 @@ header {
   position: fixed;
   display: flex;
   justify-content: space-between;
-  padding-right:10px;
+  padding-right: 10px;
   align-items: center;
   height: 50px;
   background-color: white;
@@ -57,10 +57,10 @@ table.ss-table {
   padding-left: 4px;
   font-size: 15px;
 }
-.left-head{
+.left-head {
   position: sticky;
-  left:0;
-  top:81px;
+  left: 0;
+  top: 81px;
   z-index: -1;
 }
 
@@ -74,7 +74,6 @@ td {
   padding-left: 4px;
 }
 
-  
 .cell-input {
   position: absolute;
   font-size: 15px;
@@ -82,10 +81,13 @@ td {
   resize: none;
   margin: 0;
   padding: 0;
-  resize:both;
+  resize: both;
   line-height: 27px;
   padding-left: 4px;
-  font-family: -apple-system, BlinkMacSystemFont, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS',
+    'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
 }
 
 div.fn-ribbon {
@@ -113,8 +115,8 @@ div.fn-ribbon > div:last-child {
   padding: 0px;
 }
 div.fn-ribbon > div:nth-child(2) {
-  font-family: cursive, -apple-system, BlinkMacSystemFont, "Trebuchet MS",
-    "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial;
+  font-family: cursive, -apple-system, BlinkMacSystemFont, 'Trebuchet MS',
+    'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial;
   color: #606060;
 }
 
@@ -136,7 +138,6 @@ div.fn-ribbon input:focus {
   text-align: center;
 }
 
-
 .ss-title {
   height: 27px;
   width: auto;
@@ -144,8 +145,6 @@ div.fn-ribbon input:focus {
   display: -moz-inline-box;
   display: inline-block;
 }
-
-
 
 .ss-title-label {
   font-variant-ligatures: no-contextual;
@@ -175,11 +174,12 @@ div.fn-ribbon input:focus {
   visibility: hidden;
   z-index: 2;
 }
-.ss-title-input, .ss-title-label{
-  font-family: -apple-system, BlinkMacSystemFont, "Trebuchet MS",
-    "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+.ss-title-input,
+.ss-title-label {
+  font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS',
+    'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
   font-size: 16px;
   font-weight: 500;
 }
@@ -193,7 +193,7 @@ div.fn-ribbon input:focus {
   -webkit-appearance: none;
   -moz-appearance: none;
   border: 1px solid #4d90fe;
-  box-shadow: inset 0px 1px 2px rgba(0,0,0,0.1);
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
   color: #000;
   outline: none;
 }
@@ -210,93 +210,91 @@ div.fn-ribbon input:focus {
   margin-right: 10px;
 }
 
-.btn{
+.btn {
   padding: 6px 16px;
   border-radius: 3px;
   font-weight: 400;
-  font-size: .925rem;
+  font-size: 0.925rem;
   display: inline-block;
   -webkit-appearance: button;
   -moz-appearance: button;
   cursor: pointer;
   text-transform: none;
   overflow: visible;
-  border:none;
-  margin:0 5px;
+  border: none;
+  margin: 0 5px;
 }
 
-.open-btn{
+.open-btn {
   background-color: rgb(73, 135, 238);
-  color:#fff;
-  border:1px solid rgb(52, 105, 189);
+  color: #fff;
+  border: 1px solid rgb(52, 105, 189);
 }
 
-.save-btn{
+.save-btn {
   background-color: rgb(91, 154, 93);
-  color:#fff;
-  border:1px solid rgb(87, 152, 89);
+  color: #fff;
+  border: 1px solid rgb(87, 152, 89);
 }
-footer{
-  margin : 10px 10px;
+footer {
+  margin: 10px 10px;
   padding-left: 6px;
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
 }
-footer span{
-  margin-left:5px;
+footer span {
+  margin-left: 5px;
 }
 
-.ss-top-row{
-  top:82px;
+.ss-top-row {
+  top: 82px;
   position: -webkit-sticky;
-  position : -moz-sticky;
-  position:sticky;
+  position: -moz-sticky;
+  position: sticky;
   z-index: 5;
 }
 
-.user-head{
-  top:108px;
+.user-head {
+  top: 108px;
   position: -webkit-sticky;
-  position : -moz-sticky;
-  position:sticky;
+  position: -moz-sticky;
+  position: sticky;
   /*z-index: 1;*/
   background-color: #fff;
 }
 
-.sticky-cell{
+.sticky-cell {
   z-index: 5;
   position: sticky;
   left: 0;
 }
 
-.post-script{
+.post-script {
   display: flex;
   flex-direction: column;
 }
 
-.post-script > span{
+.post-script > span {
   padding-left: 4px;
 }
 
-.post-script ol{
+.post-script ol {
   margin-top: 0;
 }
 
-.post-script li{
+.post-script li {
   padding-left: 15px;
   margin: 5px 0px;
 }
 
-.fontset, li{
-  font-family: -apple-system, BlinkMacSystemFont, "Trebuchet MS",
-    "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+.fontset,
+li {
+  font-family: -apple-system, BlinkMacSystemFont, 'Trebuchet MS',
+    'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
 }
-
-
 
 /* for firefox specific css */
 @-moz-document url-prefix() {
-  
 }

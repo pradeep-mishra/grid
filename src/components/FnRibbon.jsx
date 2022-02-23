@@ -1,11 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef } from 'react'
 
 export default function FnRibbon({ cell, funcInput, setFuncInput }) {
-  const funcInputRef = useRef(null);
+  const funcInputRef = useRef(null)
 
   useEffect(() => {
-    funcInputRef.current.value = funcInput;
-  });
+    funcInputRef.current.value = funcInput
+  })
 
   return (
     <div className="fn-ribbon">
@@ -17,10 +17,10 @@ export default function FnRibbon({ cell, funcInput, setFuncInput }) {
           type="text"
           onChange={(e) => {}}
           onBlur={(e) => {
-            setFuncInput(e.target.value);
+            setFuncInput(e.target.value)
           }}
         />
       </div>
     </div>
-  );
+  )
 }

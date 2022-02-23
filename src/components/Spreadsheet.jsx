@@ -1,37 +1,37 @@
-import { useEffect, useRef, useState } from "react";
-import FlyingInput from "./FlyingInput";
-import FnRibbon from "./FnRibbon";
-import Table from "./Table";
+import { useEffect, useRef, useState } from 'react'
+import FlyingInput from './FlyingInput'
+import FnRibbon from './FnRibbon'
+import Table from './Table'
 
-export default function Spreadsheet({ cols, rows , data , dispatch}) {
-  const [showFyingInput, setShowFlyingInput] = useState(false);
+export default function Spreadsheet({ cols, rows, data, dispatch }) {
+  const [showFyingInput, setShowFlyingInput] = useState(false)
   const [currentCell, setCurrentCell] = useState({
     x: 0,
     y: 0,
-    value: "",
-    input: ""
-  });
-  const cellRef = useRef(null);
-  const inputRef = useRef(null);
-  const tableRef = useRef(null);
+    value: '',
+    input: ''
+  })
+  const cellRef = useRef(null)
+  const inputRef = useRef(null)
+  const tableRef = useRef(null)
 
-  const cellPointer = data.getCellTitle(currentCell.x, currentCell.y) || "A0";
-  const cellValue = data.getCell(currentCell.x, currentCell.y)?.input || "";
+  const cellPointer = data.getCellTitle(currentCell.x, currentCell.y) || 'A0'
+  const cellValue = data.getCell(currentCell.x, currentCell.y)?.input || ''
 
   const setFuncInput = (value) => {
     dispatch({
       x: currentCell.x,
       y: currentCell.y,
       value: value,
-      type: "set"
-    });
-  };
+      type: 'set'
+    })
+  }
 
   useEffect(() => {
     if (showFyingInput) {
-      inputRef.current.focus();
+      inputRef.current.focus()
     }
-  }, [showFyingInput]);
+  }, [showFyingInput])
 
   return (
     <div>
@@ -40,7 +40,7 @@ export default function Spreadsheet({ cols, rows , data , dispatch}) {
         funcInput={cellValue}
         setFuncInput={setFuncInput}
       />
-       <div className="spacer-30"></div>
+      <div className="spacer-30"></div>
       <Table
         tableRef={tableRef}
         ssData={data}
@@ -61,5 +61,5 @@ export default function Spreadsheet({ cols, rows , data , dispatch}) {
         dispatch={dispatch}
       />
     </div>
-  );
+  )
 }
